@@ -146,6 +146,35 @@ form > *:last-child {
   font-size: 14px;
 }
 
+.blog-submit-values h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.blog-submit-values h2 span {
+  font-weight: normal;
+}
+
+.blog-submit-values .blog-author-name {
+  margin-bottom: 15px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.blog-submit-values .blog-author-name span {
+  font-weight: normal;
+}
+
+.blog-submit-values .blog-content {
+  font-weight: bold;
+}
+
+.blog-submit-values .blog-content p {
+  margin-top: 10px;
+  font-weight: normal;
+}
+
 .display-none {
   display: none;
 }

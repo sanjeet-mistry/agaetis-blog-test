@@ -20,13 +20,6 @@
           </div>
           <span class="error display-none">*Error Message</span>
         </div>
-        <div class="blog-date-container blog-container">
-          <div class="blog-date-input">
-            <label for="blog-date">Blog creation date:</label>
-            <input type="date" name="blog-date" id="blog-date"/>
-          </div>
-          <span class="error display-none">*Error Message</span>
-        </div>
         <div class="blog-author-container blog-container">
           <div class="blog-author-input">
             <label for="blog-author">Blog author:</label>
@@ -45,6 +38,15 @@
           <button type="submit">submit</button>
         </div>
       </form>
+    </div>
+    <div class="blog-submit-values display-none">
+      <h1>Thanks! Following values will be submitted</h1>
+      <h2 class="blog-name">Blog name: <span>name</span></h2>
+      <span class="blog-author-name">Author name: <span>author</span></span>
+      <div class="blog-content">
+        Blog Content:
+        <p class="value">content</p>
+      </div>
     </div>
   </div>
   <script src="js/script.js" defer></script>

@@ -134,4 +134,31 @@ form > *:last-child { margin-bottom: 0; }
   font-size: 14px;
 }
 
+.blog-submit-values {
+  h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+
+    span { font-weight: normal; }
+  }
+
+  .blog-author-name {
+    margin-bottom: 15px;
+    display: inline-block;
+    font-weight: bold;
+
+    span { font-weight: normal; }
+  }
+
+  .blog-content {
+    font-weight: bold;
+
+    p { 
+      margin-top: 10px;
+      font-weight: normal;
+    }
+  }
+}
+
 .display-none { display: none; }
