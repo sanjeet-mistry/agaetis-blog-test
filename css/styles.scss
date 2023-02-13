@@ -3,6 +3,16 @@ $color2: #fff;
 $color3: #007BFF;
 $color4: #f00;
 
+$tablet: 1240px;
+
+@mixin breakpoint($device) {
+	@if ($device == 'tablet') {
+		@media screen and (max-width: $tablet) {
+      @content;
+    }
+	}
+}
+
 * { box-sizing: border-box; }
 
 body {
@@ -15,9 +25,15 @@ body {
 %input-styles {
   border: 2px solid $color1;
   padding: 5px 10px;
+  display: inline-block;
   background-color: transparent;
   color: $color1;
   font-size: 16px;
+  flex-basis: 72%;
+
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
 }
 
 button {
@@ -26,7 +42,13 @@ button {
 
 .wrapper {
   width: 60%;
+  min-width: 922px;
   margin: 30px auto 0;
+
+  @include breakpoint(tablet) {
+    width: 96%;
+    min-width: auto;
+  }
 }
 
 h1 {
@@ -39,14 +61,14 @@ h1 {
 form > * { margin-bottom: 20px; }
 form > *:last-child { margin-bottom: 0; }
 
-input {
-  @extend %input-styles;
-}
-
 .blog-container {
   display: flex;
   align-items: center;
   column-gap: 4%;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
 
   div {
     display: flex;
@@ -54,26 +76,33 @@ input {
     column-gap: 4%;
     flex-basis: 70%;
 
+    @include breakpoint(tablet) {
+      margin-bottom: 15px;
+      display: block;
+    }
+
     label {
-      margin-right: 10px;
       display: inline-flex;
       flex-basis: 24%;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 5px
+      }
     }
 
     input {
-      display: inline-block;
-      flex-basis: 72%;
+      @extend %input-styles;
     }
 
     textarea {
       @extend %input-styles;
-      display: inline-block;
-      flex-basis: 72%;
     }
   }
 }
 
 .submit-button-container {
+  text-align: center;
+
   button {
     padding: 7px 16px;
     border: 2px solid $color3;

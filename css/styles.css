@@ -10,12 +10,21 @@ body {
   font-size: 16px;
 }
 
-input, .blog-container div textarea {
+.blog-container div input, .blog-container div textarea {
   border: 2px solid #000;
   padding: 5px 10px;
+  display: inline-block;
   background-color: transparent;
   color: #000;
   font-size: 16px;
+  -ms-flex-preferred-size: 72%;
+      flex-basis: 72%;
+}
+
+@media screen and (max-width: 1240px) {
+  .blog-container div input, .blog-container div textarea {
+    width: 100%;
+  }
 }
 
 button:hover {
@@ -24,7 +33,15 @@ button:hover {
 
 .wrapper {
   width: 60%;
+  min-width: 922px;
   margin: 30px auto 0;
+}
+
+@media screen and (max-width: 1240px) {
+  .wrapper {
+    width: 96%;
+    min-width: auto;
+  }
 }
 
 h1 {
@@ -53,6 +70,12 @@ form > *:last-child {
           column-gap: 4%;
 }
 
+@media screen and (max-width: 1240px) {
+  .blog-container {
+    display: block;
+  }
+}
+
 .blog-container div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,8 +89,14 @@ form > *:last-child {
       flex-basis: 70%;
 }
 
+@media screen and (max-width: 1240px) {
+  .blog-container div {
+    margin-bottom: 15px;
+    display: block;
+  }
+}
+
 .blog-container div label {
-  margin-right: 10px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -75,16 +104,14 @@ form > *:last-child {
       flex-basis: 24%;
 }
 
-.blog-container div input {
-  display: inline-block;
-  -ms-flex-preferred-size: 72%;
-      flex-basis: 72%;
+@media screen and (max-width: 1240px) {
+  .blog-container div label {
+    margin-bottom: 5px;
+  }
 }
 
-.blog-container div textarea {
-  display: inline-block;
-  -ms-flex-preferred-size: 72%;
-      flex-basis: 72%;
+.submit-button-container {
+  text-align: center;
 }
 
 .submit-button-container button {
