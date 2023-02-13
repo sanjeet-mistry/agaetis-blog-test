@@ -29,7 +29,7 @@ body {
   background-color: transparent;
   color: $color1;
   font-size: 16px;
-  flex-basis: 72%;
+  flex-basis: 76%;
 
   &:focus {
     border: 2px solid $color3;
@@ -61,6 +61,22 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+
+  @include breakpoint(tablet) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+
+  @include breakpoint(tablet) {
+    font-size: 24px;
+  }
+
+  span { font-weight: normal; }
 }
 
 form > * { margin-bottom: 20px; }
@@ -87,8 +103,8 @@ form > *:last-child { margin-bottom: 0; }
     }
 
     label {
-      display: inline-flex;
-      flex-basis: 24%;
+      display: inline-block;
+      flex-basis: 20%;
 
       @include breakpoint(tablet) {
         margin-bottom: 5px
@@ -135,14 +151,6 @@ form > *:last-child { margin-bottom: 0; }
 }
 
 .blog-submit-values {
-  h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: bold;
-
-    span { font-weight: normal; }
-  }
-
   .blog-author-name {
     margin-bottom: 15px;
     display: inline-block;

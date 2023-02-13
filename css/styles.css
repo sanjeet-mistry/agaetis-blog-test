@@ -17,8 +17,8 @@ body {
   background-color: transparent;
   color: #000;
   font-size: 16px;
-  -ms-flex-preferred-size: 72%;
-      flex-basis: 72%;
+  -ms-flex-preferred-size: 76%;
+      flex-basis: 76%;
 }
 
 .blog-container div input:focus, .blog-container div textarea:focus {
@@ -54,6 +54,28 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+}
+
+@media screen and (max-width: 1240px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1240px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h2 span {
+  font-weight: normal;
 }
 
 form > * {
@@ -102,11 +124,9 @@ form > *:last-child {
 }
 
 .blog-container div label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-preferred-size: 24%;
-      flex-basis: 24%;
+  display: inline-block;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 @media screen and (max-width: 1240px) {
@@ -144,16 +164,6 @@ form > *:last-child {
       flex-basis: 26%;
   color: #f00;
   font-size: 14px;
-}
-
-.blog-submit-values h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.blog-submit-values h2 span {
-  font-weight: normal;
 }
 
 .blog-submit-values .blog-author-name {

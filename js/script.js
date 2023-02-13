@@ -1,5 +1,6 @@
 const body = document.body;
 const formContainer = body.querySelector(".form-container");
+const form = body.querySelector("form");
 const blogSubmitValues = body.querySelector(".blog-submit-values");
 const blogName = blogSubmitValues.querySelector(".blog-name span");
 const blogAuthorName = blogSubmitValues.querySelector(".blog-author-name span");
@@ -100,5 +101,10 @@ submitButton.addEventListener("click", (event) => {
     blogName.innerText = blogNameInput.value;
     blogAuthorName.innerText = blogAuthorInput.value;
     blogContent.innerText = blogContentTextarea.value.replace(/(\n![\n]*)|(\n)/g, "\n\n");
+
+    const timer = setTimeout(() => {
+      clearTimeout(timer);
+      form.submit();
+    }, 10000);
   }
 });
