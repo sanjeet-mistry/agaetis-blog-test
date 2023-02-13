@@ -6,43 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Blog</title>
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="wrapper">
-    <h1>Create Blog</h1>
-    <form method="post" action="#FIXME">
-      <div class="blog-name-container">
-        <div class="blog-name-input">
-          <label for="blog-name">Blog name:</label>
-          <input type="text" name="blog-name" id="blog-name"/>
+    <div class="form-container">
+      <h1>Create a Blog</h1>
+      <form method="post" action="#FIXME">
+        <div class="blog-name-container blog-container">
+          <div class="blog-name-input">
+            <label for="blog-name">Blog name:</label>
+            <input type="text" name="blog-name" id="blog-name"/>
+          </div>
+          <span class="error">*Error Message</span>
         </div>
-        <span class="error">Error Message</span>
-      </div>
-      <div class="blog-date-container">
-        <div class="blog-date-input">
-          <label for="blog-date">Blog creation date:</label>
-          <input type="date" name="blog-date" id="blog-date"/>
+        <div class="blog-date-container blog-container">
+          <div class="blog-date-input">
+            <label for="blog-date">Blog creation date:</label>
+            <input type="date" name="blog-date" id="blog-date"/>
+          </div>
+          <span class="error">*Error Message</span>
         </div>
-        <span class="error">Error Message</span>
-      </div>
-      <div class="blog-author-container">
-        <div class="blog-author-input">
-          <label for="blog-author">Blog author:</label>
-          <input type="text" name="blog-author" id="blog-author"/>
+        <div class="blog-author-container blog-container">
+          <div class="blog-author-input">
+            <label for="blog-author">Blog author:</label>
+            <input type="text" name="blog-author" id="blog-author"/>
+          </div>
+          <span class="error">*Error Message</span>
         </div>
-        <span class="error">Error Message</span>
-      </div>
-      <div class="blog-content-container">
-        <div class="blog-content-input">
-          <label for="blog-content">Blog content:</label>
-          <textarea id="blog-content" rows="10"></textarea>
+        <div class="blog-content-container blog-container">
+          <div class="blog-content-input">
+            <label for="blog-content">Blog content:</label>
+            <textarea id="blog-content" rows="20"></textarea>
+          </div>
+          <span class="error">*Error Message</span>
         </div>
-        <span class="error">Error Message</span>
-      </div>
-      <div class="submit-button-container">
-        <button type="submit">submit</button>
-      </div>
-    </form>
+        <div class="submit-button-container blog-container">
+          <button type="submit">submit</button>
+        </div>
+      </form>
+    </div>
   </div>
   <script src="js/script.js" defer></script>
 </body>

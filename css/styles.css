@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+input, .blog-container div textarea {
+  border: 2px solid #000;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #000;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 30px auto 0;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+form > * {
+  margin-bottom: 20px;
+}
+
+form > *:last-child {
+  margin-bottom: 0;
+}
+
+.blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 4%;
+          column-gap: 4%;
+}
+
+.blog-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 4%;
+          column-gap: 4%;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.blog-container div label {
+  margin-right: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+}
+
+.blog-container div input {
+  display: inline-block;
+  -ms-flex-preferred-size: 72%;
+      flex-basis: 72%;
+}
+
+.blog-container div textarea {
+  display: inline-block;
+  -ms-flex-preferred-size: 72%;
+      flex-basis: 72%;
+}
+
+.submit-button-container button {
+  padding: 7px 16px;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: inline-block;
+  background-color: transparent;
+  color: #007BFF;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-transition: background-color ease-in 0.4s, color ease-in 0.4s;
+  transition: background-color ease-in 0.4s, color ease-in 0.4s;
+}
+
+.submit-button-container button:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.error {
+  -ms-flex-preferred-size: 26%;
+      flex-basis: 26%;
+  color: #f00;
+  font-size: 14px;
+}
+/*# sourceMappingURL=styles.css.map */

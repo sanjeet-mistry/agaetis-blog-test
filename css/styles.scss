@@ -1,0 +1,101 @@
+$color1: #000;
+$color2: #fff;
+$color3: #007BFF;
+$color4: #f00;
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: $color1;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+%input-styles {
+  border: 2px solid $color1;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: $color1;
+  font-size: 16px;
+}
+
+button {
+  &:hover { cursor: pointer; }
+}
+
+.wrapper {
+  width: 60%;
+  margin: 30px auto 0;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+form > * { margin-bottom: 20px; }
+form > *:last-child { margin-bottom: 0; }
+
+input {
+  @extend %input-styles;
+}
+
+.blog-container {
+  display: flex;
+  align-items: center;
+  column-gap: 4%;
+
+  div {
+    display: flex;
+    align-items: center;
+    column-gap: 4%;
+    flex-basis: 70%;
+
+    label {
+      margin-right: 10px;
+      display: inline-flex;
+      flex-basis: 24%;
+    }
+
+    input {
+      display: inline-block;
+      flex-basis: 72%;
+    }
+
+    textarea {
+      @extend %input-styles;
+      display: inline-block;
+      flex-basis: 72%;
+    }
+  }
+}
+
+.submit-button-container {
+  button {
+    padding: 7px 16px;
+    border: 2px solid $color3;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: inline-block;
+    background-color: transparent;
+    color: $color3;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: background-color ease-in 0.4s, color ease-in 0.4s;
+
+    &:hover {
+      background-color: $color3;
+      color: $color2;
+    }
+  }
+}
+
+.error {
+  flex-basis: 26%;
+  color: $color4;
+  font-size: 14px;
+}
