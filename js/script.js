@@ -28,6 +28,7 @@ const errors = [
 let allInputsValid = true;
 
 const formValidation = () => {
+  allInputsValid = true;
   // Blog name Validation
   const blogNameValue = blogNameInput.value;
   if (blogNameValue == "" || blogNameValue == null) {
@@ -50,7 +51,7 @@ const formValidation = () => {
   const blogAuthorNameValue = blogAuthorInput.value;
   if (blogAuthorNameValue == "" || blogAuthorNameValue == null) {
     allInputsValid = false;
-    errorBlogAuthor.innerText = errors[0];
+    errorBlogAuthor.innerText = errors[1];
     errorBlogAuthor.classList.remove("display-none");
   } else {
     if (blogAuthorNameValue.length < 2) {
@@ -70,7 +71,6 @@ const formValidation = () => {
 
   // Blog's Content Validation
   const blogContentValue = blogContentTextarea.value;
-  console.log(blogContentValue);
   if (blogContentValue == "" || blogContentValue == null) {
     allInputsValid = false;
     errorBlogContent.innerText = errors[2];
