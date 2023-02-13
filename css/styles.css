@@ -21,6 +21,11 @@ body {
       flex-basis: 72%;
 }
 
+.blog-container div input:focus, .blog-container div textarea:focus {
+  border: 2px solid #007BFF;
+  outline: none;
+}
+
 @media screen and (max-width: 1240px) {
   .blog-container div input, .blog-container div textarea {
     width: 100%;
@@ -34,7 +39,7 @@ button:hover {
 .wrapper {
   width: 60%;
   min-width: 922px;
-  margin: 30px auto 0;
+  margin: 30px auto;
 }
 
 @media screen and (max-width: 1240px) {
@@ -139,5 +144,9 @@ form > *:last-child {
       flex-basis: 26%;
   color: #f00;
   font-size: 14px;
+}
+
+.display-none {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
